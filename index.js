@@ -11,7 +11,7 @@ var Stamen_TerrainBackground = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastl
 	ext: 'png'
 }).addTo(mymap);
 
-var streams = $.getJSON("Coho_Dist_reproj_simp.geoJson",function(data1){
+var streams = $.getJSON("JsonCohoDistribution.geoJson",function(data1){
 		L.geoJson(data1, {
 			style : function(feature) {
 				 return {
@@ -25,7 +25,7 @@ var streams = $.getJSON("Coho_Dist_reproj_simp.geoJson",function(data1){
 		});
 
 
-var barriers = $.getJSON("Coho_bar_reproj.geoJson",function(data){
+var barriers = $.getJSON("JsonCohoBarriers.geoJson",function(data){
  	 	L.geoJson(data, {
       pointToLayer: function(feature, latlng){
 				var color,
